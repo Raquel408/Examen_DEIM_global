@@ -11,12 +11,16 @@ public class CameraLook : MonoBehaviour
 
     //variable para la posicion de la nave
     [SerializeField] Transform localizacionCaja;
+    //variable para el sonido
+    private AudioSource backgroundSound;
 
     // Start is called before the first frame update
     void Start()
     {
         //Damos una velocidad de suavizado en el seguimiento
         smoothVelocity = 0.1f;
+        //audio
+        backgroundSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
